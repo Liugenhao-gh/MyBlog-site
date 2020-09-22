@@ -1,0 +1,33 @@
+.message-list-group{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.message-list-group .message-list{
+    border-bottom: 2px solid #eee;
+    overflow: hidden;
+    padding: 15px 0;
+}
+.avatar-group{
+    width: 50px;
+    height: 100%;
+    float: left;
+}
+.avatar-group .avatar {
+    width: 50px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.message-group{
+    float : left;
+    width : 600px;
+    margin-left: 10px;
+}
+.message-info{
+    text-align: right;
+}
+
+.message-group .message-info{
+    margin-right : 20px;
+}
