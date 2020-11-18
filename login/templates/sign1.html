@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel = "stylesheet" type = "text/css"  href = "/css/bootstrap.css"/>
+<script type = "text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+<script type = "text/javascript" src="/js/bootstrap.js"></script>
+<body>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+    登录
+</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+    注册
+</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+    找回密码
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+     role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="tableable" id="tabs">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <ul class="nav nav-tabs"  role="tablist">
+                    <li id="llogin" class="nav-item active">
+                        <a href="#login" data-toggle="tab"  class="nav-link">登录</a>
+                    </li>
+                    <li id="rresign" class="nav-item active">
+                        <a href="#login" data-toggle="tab"  class="nav-link">登录</a>
+                    </li>
+                    <li id="ffind" class="nav-item active">
+                        <a href="#login" data-toggle="tab"  class="nav-link">登录</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content " >
+                <!--登录窗口-->
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="table-content" style="margin: 20px 0px">
+                        <div class="modal-body">
+                            <div class="form-group row">
+                                <label for ="loginname" class="col-4">登录邮箱</label>
+                                <input type="text" id="loginname" class="form-control col-7" placeholder="请输入您的邮箱"/>
+                            </div>
+                            <div class="form-group row">
+                                <label for ="password" class="col-4">登录邮箱</label>
+                                <input type="text" id="password" class="form-control col-7" placeholder="请输入您的密码"/>
+                            </div>
+                            <div class="form-group row">
+                                <label for ="logincode" class="col-4">登录邮箱</label>
+                                <input type="text" id="logincode" class="form-control col-5" placeholder="请输入右侧验证码"/>
+                                <img src="" id="loginvcode" class="col-3"/>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">登录</button>
+                            <button type="button" class="btn btn-primary">关闭</button>
+                        </div>
+                    </div>
+                </div>
+                <!--注册窗口-->
+                <div class="tab-pane fade show " id="resign" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="table-content" style="margin: 20px 0px">
+                        <div class="modal-body">
+                            <div class="form-group row">
+                                <label for ="resignname" class="col-4">注册邮箱</label>
+                                <input type="text" id="resignname" class="form-control col-7" placeholder="请输入您的邮箱"/>
+                            </div>
+                            <div class="form-group row">
+                                <label for ="resignpass" class="col-4">注册密码</label>
+                                <input type="text" id="resignpass" class="form-control col-7" placeholder="请输入您的密码"/>
+                            </div>
+                            <div class="form-group row">
+                                <label for ="regincode" class="col-4">邮箱验证码</label>
+                                <input type="text" id="regincode" class="form-control col-4" placeholder="请输入邮箱验证码"/>
+                                <button type="button" class=" btn btn-primary col-3">发送邮件</button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <span>注册请使用邮箱地址，便于找回密码</span>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">注册</button>
+                            <button type="button" class="btn btn-secondary ">关闭</button>
+                        </div>
+                    </div>
+                </div>
+                 <!--找回密码窗口-->
+                <div class="tab-pane fade show " id="find" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="table-content" style="margin: 20px 0px">
+                        <div class="modal-body">
+                            <div class="form-group row">
+                                <label for ="resigna" class="col-4">注册邮箱</label>
+                                <input type="text" id="resigna" class="form-control col-7" placeholder="请输入您的邮箱"/>
+                            </div>
+                            <div class="form-group row">
+                                <label for ="findpass" class="col-4">新的密码</label>
+                                <input type="text" id="findpass" class="form-control col-7" placeholder="请输入您的密码"/>
+                            </div>
+                            <div class="form-group row">
+                                <label for ="findcode" class="col-4">邮箱验证码</label>
+                                <input type="text" id="findcode" class="form-control col-4" placeholder="请输入邮箱验证码"/>
+                                <button type="button" class=" btn btn-primary col-3">发送邮件</button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">重置密码</button>
+                            <button type="button" class="btn btn-secondary ">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

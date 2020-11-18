@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--导入bootstrap-->
+<link rel = "stylesheet" type = "text/css"  href = "/css/bootstrap.css"/>
+<script type = "text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+<script type = "text/javascript" src="/js/bootstrap.js"></script>
+<meta name="viewport" content =" width = device-width,intial-scale = 1,user-scalable=yes"/><!--移动端设备,可缩放
+为了模拟app可设为no-->
+<style>
+    .container {
+        border : solid 0px red;
+    }
+    body {
+        background-color: #eee;
+    }
+    .row div {
+        border : solid 0px red;
+    }
+    .outmost {
+        border-top: solid 0px black;
+    }
+    .menu {
+        border-top: solid 0px orange;
+        background-color: #563d7c;
+    }
+
+    .search-bar {
+        margin: 0px;
+        border: solid 1px #cccccc;
+        padding: 10px 0px;
+        background-color: #563d7c;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+        color: #337ab7;
+    }
+    a:hover, a:active {
+        text-decoration: none;
+        color: #e56244;
+    }
+    /* 页面中部右侧边样样式 */
+    .side {
+        margin-top: 20px;
+        border: solid 1px #cccccc;
+        padding: 0px 0px;
+        background-color: whitesmoke;
+    }
+    .side .tip {
+        background-color: #333333;
+        height: 42px;
+        color: white;
+        line-height: 42px;
+        padding-left: 10px;
+        border-radius: 0px;
+        font-size: 18px;
+        border-bottom: solid 2px orangered;
+    }
+    .side ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+    .side ul li {
+        line-height: 35px;
+        padding-left: 10px;
+    }
+    .arcticle{
+        border: solid 1px red;
+    }
+    .arcticle-detail{
+        border: solid 1px #cccccc;
+        margin: 0px;
+        background-color: whitesmoke;
+        padding: 0px 10px 0px 20px;
+    }
+    .arcticle-detail .title{
+        font-size: 24px;
+        color: #e56244;
+        margin-top: 30px;
+    }
+    .arcticle-detail .favorite{
+        text-align: right;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    .arcticle-detail .info{
+        font-size: 14px;
+        color: #666666;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #cccccc;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .arcticle-detail .content {
+        font-size: 16px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+    .arcticle .nav{
+        border: solid 1px #cccccc;
+        margin: 10px 0px;
+        background-color: whitesmoke;
+        padding: 10px 10px 10px 20px;
+        line-height: 35px;
+    }
+    .arcticle .nav div{
+        margin :10px;
+    }
+    .article .comment {
+        border: solid 1px #cccccc;
+        margin: 10px 0px;
+        background-color: whitesmoke;
+        padding: 20px 0px 10px 0px;
+        line-height: 35px;
+    }
+
+    <!--当前浏览器窗口大于1300像素，就设为1300像素（容器）-->
+    @media (min-width: 1300px) {
+        .container {
+            max-width: 1300px;
+        }
+    }
+</style>
+
+
+<body>
+<!--栅格系统把网页分为12等分宽度-->
+<div class = "outmost" >
+    <div class = "container" style=" padding:0px">
+        <div class = "row" >
+            <div class = "col-5"><img src="/img/background_Loading.png" height="70px" width="200px"></div>
+            <div class = "col-7 d-none d-sm-block" style="text-align: right;  padding-top: 15px">
+                <h2>我最牛，我最棒</h2></div>
+            <div class = "col-7 d-sm-none" style="text-align: right; padding-top: 15px">
+                <h2>牛</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "menu">
+    <div class = "container">
+        <nav class="navbar navbar-expand-lg navbar-dark  menu-bar" style="background-color: #563d7c" >
+            <a class="navbar-brand" href="#">导航栏</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ">
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                </div>
+                <div class="navbar-nav ml-auto" >
+                    <a class="nav-item nav-link" href="#">登录</a>
+                    <a class="nav-item nav-link" href="#">注册</a>
+                    <a class="nav-item nav-link" href="#">用户中心</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-12  arcticle" style=" padding: 0 10px;" id="left">
+            <div class = "col-12  row arcticle-detail" >
+                <div class = "col-9 title">
+                    这篇文章的标题
+                </div>
+                <div class = "col-3 favorite">
+                    <label><span class = "oi oi-heart" aria-hidden="true"></span>收藏本文</label>
+                </div>
+                <div class="col-12  info">
+                    作者：强哥&nbsp;&nbsp;&nbsp;类别：测试开发&nbsp;&nbsp;&nbsp;
+                    日期：2020-06-23 17:09:09&nbsp;&nbsp;&nbsp;
+                    阅读：72 次&nbsp;&nbsp;&nbsp;消耗积分：0 分
+                </div>
+                <div class =" col-12 content">
+
+                    本周分享《Appium核心应用》实验中的Web应用测试。<br/>
+
+                    回顾上周内容，请点击：<br/>
+
+                    教材连载：Appium核心应用（一）<br/>
+
+                    教材连载：Appium核心应用（二）<br/>
+
+                    教材连载：Appium核心应用（三）<br/>
+                </div>
+            </div>
+            <div class="col-12 nav">
+                <div>版权所有，转载本站文章请注明出处：蜗牛笔记， http://www.woniunote.com/article/428</div>
+                <div>上一篇：<a href="#">2019，这是我的年终总结！</a></div>
+                <div>下一篇：<a href="#">20，这是我的年终总结！</a></div>
+                <div></div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3 col-12" style="border: none; padding-right: 0px; padding-top: 10px">
+            <div class = "col-12 search-bar row">
+                <div class = "col-8">
+                    <input type="text" class = "form-control" id = "keyword" placeholder="请输入关键字"/>
+                </div>
+                <div class = "col-4" style="text-align: right" >
+                    <button type="button" class="btn btn-primary" >搜索</button>
+                </div>
+            </div>
+            <div class="col-12 side">
+                <div class="tip">最新文章</div>
+                <ul id="last"><li><a href="/article/577">1.&nbsp;&nbsp;牛</a></li><li><a href="/article/576">
+                    2.&nbsp;&nbsp;牛</a></li><li><a href="/article/575">
+                    3.&nbsp;&nbsp;牛</a></li><li><a href="/article/574">
+                    4.&nbsp;&nbsp;牛</a></li><li><a href="/article/573">
+                    5.&nbsp;&nbsp;牛</a></li><li><a href="/article/572">
+                    6.&nbsp;&nbsp;牛</a></li><li><a href="/article/571">
+                    7.&nbsp;&nbsp;牛</a></li><li><a href="/article/570">
+                    8.&nbsp;&nbsp;牛</a></li><li><a href="/article/569">
+                    9.&nbsp;&nbsp;牛</a></li></ul>
+            </div>
+            <div class="col-12 side">
+                <div class="tip">最多阅读</div>
+                <ul id="most"><li><a href="/article/577">1.&nbsp;&nbsp;牛</a></li><li><a href="/article/576">
+                    2.&nbsp;&nbsp;牛</a></li><li><a href="/article/575">
+                    3.&nbsp;&nbsp;牛</a></li><li><a href="/article/574">
+                    4.&nbsp;&nbsp;牛</a></li><li><a href="/article/573">
+                    5.&nbsp;&nbsp;牛</a></li><li><a href="/article/572">
+                    6.&nbsp;&nbsp;牛</a></li><li><a href="/article/571">
+                    7.&nbsp;&nbsp;牛</a></li><li><a href="/article/570">
+                    8.&nbsp;&nbsp;牛</a></li><li><a href="/article/569">
+                    9.&nbsp;&nbsp;牛</a></li></ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
